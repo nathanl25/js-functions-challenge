@@ -95,7 +95,7 @@ console.log(calculator(12, 2, "/"));
 
 // Not quite sure what number I'm supposed to divide by
 function moonOrbits(days) {
-  if (days % 27 == 0) {
+  if (days % 27 === 0) {
     return days / 27;
   } else {
     let orbits = days / 27.322;
@@ -112,9 +112,15 @@ function circleArea(radius) {
   return (Math.PI * radius ** 2).toFixed(2);
 }
 
+// Arrow function of area function
+const arrCArea = (radius) => (Math.PI * radius ** 2).toFixed(2);
+
 function circlePerimeter(radius) {
   return (Math.PI * 2 * radius).toFixed(2);
 }
+
+// Arrow function of perimeter function
+const arrCPerimeter = (radius) => (Math.PI * 2 * radius).toFixed(2);
 
 console.log(circleArea(10));
 console.log(circlePerimeter(10));
@@ -147,6 +153,8 @@ function basketball(twoPointers, threePointers) {
   return 2 * twoPointers + 3 * threePointers;
 }
 
+const arrBasketball = (twos, threes) => 2 * twos + 3 * threes;
+
 console.log(basketball(2, 1));
 
 //Less than 100
@@ -158,6 +166,18 @@ function lessThan100(num1, num2) {
   }
 }
 
+//Written using a ternary operator
+function altLessThan100(num1, num2) {
+  return num1 + num2 > 100 ? false : true;
+}
+
+//Ternary operator + Arrow function
+const arrLessThan100 = (num1, num2) => (num1 + num2 > 100 ? false : true);
+
 console.log(lessThan100(22, 15));
 console.log(lessThan100(83, 24));
 console.log(lessThan100(3, 77));
+
+console.log(altLessThan100(22, 15));
+console.log(altLessThan100(83, 24));
+console.log(altLessThan100(3, 77));
