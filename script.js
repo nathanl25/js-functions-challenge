@@ -1,7 +1,7 @@
 // What are functions?
 // Blocks of code that perform a certain task
 // We use them to avoid repetition of code
-
+/*
 const student = "Jack";
 const student2 = "Kate";
 const student3 = "Jenny";
@@ -88,5 +88,76 @@ const calculator = (num1, num2, op) => {
 
 console.log(calculator(2, 2, "+"));
 console.log(calculator(12, 2, "/"));
-
+*/
 // Pure functions - homework
+
+// Calculating Moon Orbits
+
+// Not quite sure what number I'm supposed to divide by
+function moonOrbits(days) {
+  if (days % 27 == 0) {
+    return days / 27;
+  } else {
+    let orbits = days / 27.322;
+    return orbits.toFixed(3);
+  }
+}
+
+console.log(moonOrbits(54));
+console.log(moonOrbits(365));
+
+// // Working with Circles
+
+function circleArea(radius) {
+  return (Math.PI * radius ** 2).toFixed(2);
+}
+
+function circlePerimeter(radius) {
+  return (Math.PI * 2 * radius).toFixed(2);
+}
+
+console.log(circleArea(10));
+console.log(circlePerimeter(10));
+
+// Years to Days & Seconds
+// function ageInDays(years) {
+//   return years * 365;
+// }
+
+// function ageInSeconds(years) {
+//   let days = ageInDays(years);
+//   return days * 86400;
+// }
+
+// console.log(ageInDays(32));
+// console.log(ageInSeconds(32));
+
+// Count Remainder
+function remainder(num1, num2) {
+  return num1 % num2;
+}
+
+console.log(remainder(1, 3));
+console.log(remainder(3, 4));
+console.log(remainder(-1, 45));
+console.log(remainder(5, 5));
+
+//Basketball Points
+function basketball(twoPointers, threePointers) {
+  return 2 * twoPointers + 3 * threePointers;
+}
+
+console.log(basketball(2, 1));
+
+//Less than 100
+function lessThan100(num1, num2) {
+  if (num1 + num2 <= 100) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(lessThan100(22, 15));
+console.log(lessThan100(83, 24));
+console.log(lessThan100(3, 77));
